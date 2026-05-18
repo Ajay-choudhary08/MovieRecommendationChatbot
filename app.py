@@ -967,78 +967,6 @@ elif page == "⭐ My Watchlist":
         st.code(str(e))
 
 # ============================================
-# SECTION 14: AI CHATBOT PAGE
-# Use:
-# User movie-related AI questions pooch sakta hai
-# Cloud deployment par Ollama unavailable hone par fallback message show hota hai
-# ============================================
-
-elif page == "🤖 AI Chatbot":
-
-    st.title("🤖 CineMate AI Chatbot")
-
-    st.markdown("""
-    <div class="chatbot-hero">
-        <h2>Ask CineMate AI anything about movies 🎬</h2>
-        <p>
-            Get movie suggestions, story details, cast information,
-            similar movie ideas and watch recommendations instantly.
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
-
-    # Movie Context
-    movie_context = movies[
-        ["title", "genre", "rating", "year", "description"]
-    ].head(30).to_string(index=False)
-
-    # Suggested Questions
-    st.subheader("💡 Try asking:")
-
-    col1, col2, col3 = st.columns(3)
-
-    with col1:
-        st.info("Suggest me a thriller movie")
-
-    with col2:
-        st.info("Best movie for weekend night?")
-
-    with col3:
-        st.info("Tell me similar movies like Inception")
-
-    # Clear Chat Button
-    if st.button("🧹 Clear Chat"):
-
-        st.session_state.chat_history = []
-        st.rerun()
-
-    # Display Old Chat Messages
-    for msg in st.session_state.chat_history:
-
-        with st.chat_message(msg["role"]):
-            st.write(msg["content"])
-
-    # Chat Input
-    user_prompt = st.chat_input(
-        "Ask me about movies, actors, story or recommendations..."
-    )
-
-    if user_prompt:
-
-        st.session_state.chat_history.append({
-            "role": "user",
-            "content": user_prompt
-        })
-
-        with st.chat_message("user"):
-            st.write(user_prompt)
-
-        with st.chat_message("assistant"):
-
-            with st.spinner("CineMate AI is thinking..."):
-
-                ai_reply = """
-# ============================================
 # SECTION 14F: GROQ AI RESPONSE
 # Use:
 # Groq cloud AI API se chatbot response generate karta hai
@@ -1048,12 +976,7 @@ client = Groq(
     api_key=st.secrets["GROQ_API_KEY"]
 )
 
-response = client.chat.completions.create(
-    model="llama3-8b-8192",
-    messages=[
-        {
-            "role": "system",
-            "content": f"""
+system_prompt = f"""
 You are CineMate AI, a friendly movie recommendation assistant.
 
 Available Movies:
@@ -1061,6 +984,13 @@ Available Movies:
 
 Reply in Hinglish if user asks in Hinglish.
 """
+
+response = client.chat.completions.create(
+    model="llama3-8b-8192",
+    messages=[
+        {
+            "role": "system",
+            "content": system_prompt
         },
         *st.session_state.chat_history
     ]
