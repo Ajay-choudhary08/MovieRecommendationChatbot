@@ -48,8 +48,8 @@ REGISTER_URL = "https://movierecommendationchatbot.onrender.com/register"
 # ============================================
 
 ADMIN_LOGIN_URL = "https://movierecommendationchatbot.onrender.com/admin/login"
-ADMIN_REGISTER_URL = "http://127.0.0.1:5000/admin/register"
-MOVIES_URL = "http://127.0.0.1:5000/movies"
+ADMIN_REGISTER_URL = "https://movierecommendationchatbot.onrender.com/admin/register"
+MOVIES_URL = "https://movierecommendationchatbot.onrender.com/movies"
 
 # ============================================
 # SECTION 4: OMDb API KEY
@@ -1063,25 +1063,21 @@ elif page == "🤖 AI Chatbot":
 
                 try:
 
-                    # ============================================
-                    # SECTION 14F: OLLAMA AI RESPONSE
-                    # Use:
-                    # Local Ollama model se AI response generate karta hai
-                    # ============================================
+# ============================================
+# SECTION 14F: CLOUD CHATBOT MESSAGE
+# Use:
+# Streamlit cloud deployment par Ollama unavailable hone par fallback message show karta hai
+# ============================================
+
 ai_reply = """
 🤖 CineMate AI Chatbot is currently unavailable on cloud deployment.
 
 Please run the project locally to use the AI chatbot with Ollama.
 """
 
-                    st.write(ai_reply)
+st.write(ai_reply)
 
-                    st.session_state.chat_history.append({
-                        "role": "assistant",
-                        "content": ai_reply
-                    })
-
-                except Exception as e:
-
-                    st.error("Ollama Error")
-                    st.code(str(e))
+st.session_state.chat_history.append({
+    "role": "assistant",
+    "content": ai_reply
+})
