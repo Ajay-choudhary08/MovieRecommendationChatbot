@@ -34,11 +34,11 @@ st.set_page_config(
 # Flask backend APIs connect karne ke liye
 # ============================================
 
-API_URL = "http://127.0.0.1:5000/movies"
-WATCHLIST_URL = "http://127.0.0.1:5000/watchlist"
+API_URL = "https://movierecommendationchatbot.onrender.com/movies"
+WATCHLIST_URL = "https://movierecommendationchatbot.onrender.com/watchlist"
 
-LOGIN_URL = "http://127.0.0.1:5000/login"
-REGISTER_URL = "http://127.0.0.1:5000/register"
+LOGIN_URL = "https://movierecommendationchatbot.onrender.com/login"
+REGISTER_URL = "https://movierecommendationchatbot.onrender.com/register"
 
 # ============================================
 # SECTION 3A: ADMIN API URL
@@ -47,8 +47,9 @@ REGISTER_URL = "http://127.0.0.1:5000/register"
 # Normal user ko admin option show nahi hoga
 # ============================================
 
-ADMIN_LOGIN_URL = "http://127.0.0.1:5000/admin/login"
-
+ADMIN_LOGIN_URL = "https://movierecommendationchatbot.onrender.com/admin/login"
+ADMIN_REGISTER_URL = "http://127.0.0.1:5000/admin/register"
+MOVIES_URL = "http://127.0.0.1:5000/movies"
 
 # ============================================
 # SECTION 4: OMDb API KEY
