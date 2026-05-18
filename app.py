@@ -969,7 +969,7 @@ elif page == "⭐ My Watchlist":
 # SECTION 14: AI CHATBOT PAGE
 # Use:
 # User movie-related AI questions pooch sakta hai
-# Chatbot movie suggestions, story, cast aur similar movies explain karta hai
+# Cloud deployment par Ollama unavailable hone par fallback message show hota hai
 # ============================================
 
 elif page == "🤖 AI Chatbot":
@@ -986,22 +986,12 @@ elif page == "🤖 AI Chatbot":
     </div>
     """, unsafe_allow_html=True)
 
-    # ============================================
-    # SECTION 14A: MOVIE CONTEXT FOR AI
-    # Use:
-    # Backend movies data ka short context AI ko dene ke liye
-    # ============================================
-
+    # Movie Context
     movie_context = movies[
         ["title", "genre", "rating", "year", "description"]
     ].head(30).to_string(index=False)
 
-    # ============================================
-    # SECTION 14B: SUGGESTED QUESTIONS
-    # Use:
-    # User ko example prompts dikhane ke liye
-    # ============================================
-
+    # Suggested Questions
     st.subheader("💡 Try asking:")
 
     col1, col2, col3 = st.columns(3)
@@ -1015,34 +1005,19 @@ elif page == "🤖 AI Chatbot":
     with col3:
         st.info("Tell me similar movies like Inception")
 
-    # ============================================
-    # SECTION 14C: CLEAR CHAT BUTTON
-    # Use:
-    # User purani chat history clear kar sakta hai
-    # ============================================
-
+    # Clear Chat Button
     if st.button("🧹 Clear Chat"):
 
         st.session_state.chat_history = []
         st.rerun()
 
-    # ============================================
-    # SECTION 14D: DISPLAY OLD CHAT MESSAGES
-    # Use:
-    # Previous user aur assistant messages show karta hai
-    # ============================================
-
+    # Display Old Chat Messages
     for msg in st.session_state.chat_history:
 
         with st.chat_message(msg["role"]):
             st.write(msg["content"])
 
-    # ============================================
-    # SECTION 14E: CHAT INPUT
-    # Use:
-    # User yaha apna movie-related question type karta hai
-    # ============================================
-
+    # Chat Input
     user_prompt = st.chat_input(
         "Ask me about movies, actors, story or recommendations..."
     )
@@ -1061,23 +1036,15 @@ elif page == "🤖 AI Chatbot":
 
             with st.spinner("CineMate AI is thinking..."):
 
-                try:
-
-# ============================================
-# SECTION 14F: CLOUD CHATBOT MESSAGE
-# Use:
-# Streamlit cloud deployment par Ollama unavailable hone par fallback message show karta hai
-# ============================================
-
-ai_reply = """
+                ai_reply = """
 🤖 CineMate AI Chatbot is currently unavailable on cloud deployment.
 
 Please run the project locally to use the AI chatbot with Ollama.
 """
 
-st.write(ai_reply)
+                st.write(ai_reply)
 
-st.session_state.chat_history.append({
-    "role": "assistant",
-    "content": ai_reply
-})
+                st.session_state.chat_history.append({
+                    "role": "assistant",
+                    "content": ai_reply
+                })
