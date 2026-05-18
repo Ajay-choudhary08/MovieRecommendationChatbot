@@ -8,7 +8,7 @@
 # requests -> backend APIs aur OMDb API call karne ke liye
 # ============================================
 
-import ollama
+#import ollama
 import streamlit as st
 import pandas as pd
 import os
@@ -1068,33 +1068,11 @@ elif page == "🤖 AI Chatbot":
                     # Use:
                     # Local Ollama model se AI response generate karta hai
                     # ============================================
+ai_reply = """
+🤖 CineMate AI Chatbot is currently unavailable on cloud deployment.
 
-                    response = ollama.chat(
-                        model="gemma2:2b",
-                        messages=[
-                            {
-                                "role": "system",
-                                "content": f"""
-You are CineMate AI, a friendly movie recommendation assistant.
-
-Available Movies:
-{movie_context}
-
-Your work:
-1. Suggest movies based on mood, genre, rating or user interest.
-2. Explain movie story in simple language.
-3. Mention cast, genre, rating and release year when available.
-4. Recommend similar movies.
-5. Do not guess exact details if not available.
-6. Reply in Hinglish if user asks in Hinglish.
-7. Keep answer clear, friendly and helpful.
+Please run the project locally to use the AI chatbot with Ollama.
 """
-                            },
-                            *st.session_state.chat_history
-                        ]
-                    )
-
-                    ai_reply = response["message"]["content"]
 
                     st.write(ai_reply)
 
