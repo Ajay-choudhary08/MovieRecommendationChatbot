@@ -966,51 +966,128 @@ elif page == "⭐ My Watchlist":
         st.error("Watchlist API Error")
         st.code(str(e))
 
-        # ============================================
-# SECTION 14A: MOVIE CONTEXT FOR AI
+       # ============================================
+# SECTION 14: AI CHATBOT PAGE
 # Use:
-# Movies data ko AI chatbot context dene ke liye
+# Pehle jaisa AI chatbot UI show karta hai
+# Local system par Ollama use hota hai
+# Deploy/Streamlit Cloud par Groq use hota hai
 # ============================================
 
-movie_context = movies[
-    ["title", "genre", "rating", "year", "description"]
-].head(30).to_string(index=False)
+elif page == "🤖 AI Chatbot":
 
-# ============================================
-# SECTION 14F: GROQ AI RESPONSE
-# Use:
-# Groq cloud AI API se chatbot response generate karta hai
-# ============================================
+    st.title("🤖 CineMate AI Chatbot")
 
-client = Groq(
-    api_key=st.secrets["GROQ_API_KEY"]
-)
+    st.markdown("""
+    <div class="chatbot-hero">
+        <h2>Ask CineMate AI anything about movies 🎬</h2>
+        <p>
+            Get movie suggestions, story details, cast information,
+            similar movie ideas and watch recommendations instantly.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
 
-system_prompt = f"""
+    movie_context = movies[
+        ["title", "genre", "rating", "year", "description"]
+    ].head(30).to_string(index=False)
+
+    st.subheader("💡 Try asking:")
+
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        st.info("Suggest me a thriller movie")
+
+    with col2:
+        st.info("Best movie for weekend night?")
+
+    with col3:
+        st.info("Tell me similar movies like Inception")
+
+    if st.button("🧹 Clear Chat"):
+        st.session_state.chat_history = []
+        st.rerun()
+
+    for msg in st.session_state.chat_history:
+        with st.chat_message(msg["role"]):
+            st.write(msg["content"])
+
+    user_prompt = st.chat_input(
+        "Ask me about movies, actors, story or recommendations..."
+    )
+
+    if user_prompt:
+
+        st.session_state.chat_history.append({
+            "role": "user",
+            "content": user_prompt
+        })
+
+        with st.chat_message("user"):
+            st.write(user_prompt)
+
+        with st.chat_message("assistant"):
+            with st.spinner("CineMate AI is thinking..."):
+
+                system_prompt = f"""
 You are CineMate AI, a friendly movie recommendation assistant.
 
 Available Movies:
 {movie_context}
 
-Reply in Hinglish if user asks in Hinglish.
+Your work:
+1. Suggest movies based on mood, genre, rating or user interest.
+2. Explain movie story in simple language.
+3. Mention cast, genre, rating and release year when available.
+4. Recommend similar movies.
+5. Do not guess exact details if not available.
+6. Reply in Hinglish if user asks in Hinglish.
+7. Keep answer clear, friendly and helpful.
 """
 
-response = client.chat.completions.create(
-   model="llama-3.1-8b-instant",
-    messages=[
-        {
-            "role": "system",
-            "content": system_prompt
-        },
-        *st.session_state.chat_history
-    ]
-)
+                try:
+                    if "GROQ_API_KEY" in st.secrets:
+                        client = Groq(
+                            api_key=st.secrets["GROQ_API_KEY"]
+                        )
 
-ai_reply = response.choices[0].message.content
+                        response = client.chat.completions.create(
+                            model="llama-3.1-8b-instant",
+                            messages=[
+                                {
+                                    "role": "system",
+                                    "content": system_prompt
+                                },
+                                *st.session_state.chat_history
+                            ]
+                        )
 
-st.write(ai_reply)
+                        ai_reply = response.choices[0].message.content
 
-st.session_state.chat_history.append({
-    "role": "assistant",
-    "content": ai_reply
-})
+                    else:
+                        import ollama
+
+                        response = ollama.chat(
+                            model="gemma2:2b",
+                            messages=[
+                                {
+                                    "role": "system",
+                                    "content": system_prompt
+                                },
+                                *st.session_state.chat_history
+                            ]
+                        )
+
+                        ai_reply = response["message"]["content"]
+
+                    st.write(ai_reply)
+
+                    st.session_state.chat_history.append({
+                        "role": "assistant",
+                        "content": ai_reply
+                    })
+
+                except Exception as e:
+                    st.error("AI Chatbot Error")
+                    st.code(str(e))
