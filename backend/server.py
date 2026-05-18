@@ -550,15 +550,19 @@ def remove_from_watchlist(title):
 # ============================================
 # SECTION 21: RUN FLASK SERVER
 # Use:
-# Flask backend ko localhost port 5000 par run karne ke liye
+# Flask backend ko local aur Render deployment dono par run karne ke liye
+# Render par PORT environment variable use hota hai
+# Local system par default port 5000 use hota hai
 # ============================================
 
 if __name__ == "__main__":
 
     print("CineMate AI Backend Starting...")
 
+    port = int(os.environ.get("PORT", 5000))
+
     app.run(
-        host="127.0.0.1",
-        port=5000,
-        debug=True
+        host="0.0.0.0",
+        port=port,
+        debug=False
     )
