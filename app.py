@@ -966,6 +966,16 @@ elif page == "⭐ My Watchlist":
         st.error("Watchlist API Error")
         st.code(str(e))
 
+        # ============================================
+# SECTION 14A: MOVIE CONTEXT FOR AI
+# Use:
+# Movies data ko AI chatbot context dene ke liye
+# ============================================
+
+movie_context = movies[
+    ["title", "genre", "rating", "year", "description"]
+].head(30).to_string(index=False)
+
 # ============================================
 # SECTION 14F: GROQ AI RESPONSE
 # Use:
