@@ -9,6 +9,7 @@
 # ============================================
 
 #import ollama
+from groq import Groq
 import streamlit as st
 import pandas as pd
 import os
@@ -1037,14 +1038,39 @@ elif page == "🤖 AI Chatbot":
             with st.spinner("CineMate AI is thinking..."):
 
                 ai_reply = """
-🤖 CineMate AI Chatbot is currently unavailable on cloud deployment.
+# ============================================
+# SECTION 14F: GROQ AI RESPONSE
+# Use:
+# Groq cloud AI API se chatbot response generate karta hai
+# ============================================
 
-Please run the project locally to use the AI chatbot with Ollama.
+client = Groq(
+    api_key=st.secrets["GROQ_API_KEY"]
+)
+
+response = client.chat.completions.create(
+    model="llama3-8b-8192",
+    messages=[
+        {
+            "role": "system",
+            "content": f"""
+You are CineMate AI, a friendly movie recommendation assistant.
+
+Available Movies:
+{movie_context}
+
+Reply in Hinglish if user asks in Hinglish.
 """
+        },
+        *st.session_state.chat_history
+    ]
+)
 
-                st.write(ai_reply)
+ai_reply = response.choices[0].message.content
 
-                st.session_state.chat_history.append({
-                    "role": "assistant",
-                    "content": ai_reply
-                })
+st.write(ai_reply)
+
+st.session_state.chat_history.append({
+    "role": "assistant",
+    "content": ai_reply
+})

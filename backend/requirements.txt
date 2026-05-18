@@ -4,3 +4,4 @@ flask-cors
 pandas
 requests
 ollama
+groq
