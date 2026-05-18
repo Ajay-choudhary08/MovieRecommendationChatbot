@@ -1,0 +1,60 @@
+[
+    {
+        "title": "Avatar",
+        "genre": "Sci-Fi",
+        "rating": 7.9,
+        "year": 2009,
+        "description": "Humans explore the alien world of Pandora."
+    },
+    {
+        "title": "Interstellar",
+        "genre": "Sci-Fi",
+        "rating": 8.6,
+        "year": 2014,
+        "description": "A space exploration movie with emotional storytelling."
+    },
+    {
+        "title": "The Matrix",
+        "genre": "Action, Sci-Fi",
+        "rating": 8.7,
+        "year": 1999,
+        "description": "When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BN2NmN2VhMTQtMDNiOS00NDlhLTliMjgtODE2ZTY0ODQyNDRhXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+        "imdb_rating": "8.7",
+        "actors": "Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss",
+        "runtime": "136 min"
+    },
+    {
+        "title": "Inception",
+        "genre": "Action, Adventure, Sci-Fi",
+        "rating": 8.8,
+        "year": 2010,
+        "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO, but his tragic past may doom the project and his team to disaster.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+        "imdb_rating": "8.8",
+        "actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page",
+        "runtime": "148 min"
+    },
+    {
+        "title": "The Dark Knight",
+        "genre": "Action, Crime, Drama",
+        "rating": 9.0,
+        "year": 2008,
+        "description": "When a menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman, James Gordon and Harvey Dent must work together to put an end to the madness.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+        "imdb_rating": "9.1",
+        "actors": "Christian Bale, Heath Ledger, Aaron Eckhart",
+        "runtime": "152 min"
+    },
+    {
+        "title": "Avengers Endgame",
+        "genre": "Action, Adventure, Sci-Fi",
+        "rating": 8.5,
+        "year": 2019,
+        "description": "After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+        "imdb_rating": "8.4",
+        "actors": "Robert Downey Jr., Chris Evans, Mark Ruffalo",
+        "runtime": "181 min"
+    }
+]

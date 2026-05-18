@@ -1,0 +1,913 @@
+/* ============================================
+SECTION 1: GOOGLE FONT IMPORT
+Use:
+Netflix-style modern font apply karne ke liye
+============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* ============================================
+SECTION 2: MAIN APP BACKGROUND
+Use:
+Pure app ka dark Netflix-style background
+============================================ */
+
+html,
+body,
+[class*="css"] {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f1117;
+    color: white;
+}
+
+
+/* ============================================
+SECTION 3: MAIN CONTAINER
+Use:
+App ke content ko spacing aur clean layout dene ke liye
+============================================ */
+
+.block-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+
+/* ============================================
+SECTION 4: APP TITLE
+Use:
+Main title ko Netflix-style red highlight dene ke liye
+============================================ */
+
+h1 {
+    color: #e50914 !important;
+    font-weight: 700 !important;
+}
+
+
+/* ============================================
+SECTION 5: SUBHEADINGS
+Use:
+Subheadings ko clean white modern look dene ke liye
+============================================ */
+
+h2,
+h3 {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+
+/* ============================================
+SECTION 6: SIDEBAR DESIGN
+Use:
+Sidebar ko dark premium look dene ke liye
+============================================ */
+
+section[data-testid="stSidebar"] {
+    background-color: #161b22;
+    border-right: 1px solid #30363d;
+}
+
+
+/* ============================================
+SECTION 7: INPUT BOXES
+Use:
+Login/Register/Search input fields styling
+============================================ */
+
+.stTextInput input,
+.stNumberInput input,
+.stTextArea textarea {
+    background-color: #1c1f26 !important;
+    color: white !important;
+    border: 1px solid #30363d !important;
+    border-radius: 10px !important;
+}
+
+
+/* ============================================
+SECTION 8: BUTTON STYLING
+Use:
+Netflix-style red buttons
+============================================ */
+
+.stButton button {
+    background-color: #e50914 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 10px !important;
+    padding: 10px 18px !important;
+    font-weight: 600 !important;
+    transition: 0.3s ease;
+}
+
+
+/* ============================================
+SECTION 9: BUTTON HOVER EFFECT
+Use:
+Hover par smooth animation aur dark red effect
+============================================ */
+
+.stButton button:hover {
+    background-color: #b20710 !important;
+    transform: scale(1.03);
+}
+
+
+/* ============================================
+SECTION 10: MOVIE CARD STYLE
+Use:
+Movie sections ko premium card layout dene ke liye
+============================================ */
+
+.movie-card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* ============================================
+SECTION 11: MOVIE TITLE
+Use:
+Movie title ko standout look dene ke liye
+============================================ */
+
+.movie-title {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+
+/* ============================================
+SECTION 12: MOVIE INFO TEXT
+Use:
+Genre, rating, runtime details styling
+============================================ */
+
+.movie-info {
+    color: #c9d1d9;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+
+/* ============================================
+SECTION 13: CHATBOT CONTAINER
+Use:
+AI chatbot section ko separate dark box look dene ke liye
+============================================ */
+
+[data-testid="stChatMessage"] {
+    background-color: #161b22;
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* ============================================
+SECTION 14: SUCCESS / INFO BOX
+Use:
+Messages ko cleaner modern style dene ke liye
+============================================ */
+
+.stSuccess,
+.stInfo {
+    border-radius: 10px !important;
+}
+
+
+/* ============================================
+SECTION 15: IMAGE STYLING
+Use:
+Movie posters ko rounded premium look dene ke liye
+============================================ */
+
+img {
+    border-radius: 12px;
+}
+
+
+/* ============================================
+SECTION 16: SCROLLBAR DESIGN
+Use:
+Custom smooth dark scrollbar
+============================================ */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f1117;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e50914;
+    border-radius: 10px;
+}
+
+/* ============================================
+SECTION 17: HOME HERO SECTION
+Use:
+Home page ko Netflix-style attractive banner look dene ke liye
+============================================ */
+
+.home-hero {
+    background: linear-gradient(135deg, #e50914, #141414);
+    padding: 35px;
+    border-radius: 22px;
+    margin-bottom: 30px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+}
+
+.home-hero h1 {
+    color: white !important;
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.home-hero p {
+    color: #f1f1f1;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* ============================================
+SECTION 18: HOME FEATURE CARDS
+Use:
+Home page feature cards ko premium Netflix-style card design dene ke liye
+============================================ */
+
+.home-card {
+    background-color: #161b22;
+    padding: 24px;
+    border-radius: 18px;
+    border: 1px solid #30363d;
+    min-height: 170px;
+    transition: 0.3s ease;
+}
+
+.home-card:hover {
+    transform: translateY(-6px);
+    border-color: #e50914;
+    box-shadow: 0 10px 25px rgba(229, 9, 20, 0.25);
+}
+
+.home-card h3 {
+    color: #ffffff !important;
+    margin-bottom: 10px;
+}
+
+.home-card p {
+    color: #c9d1d9;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* ============================================
+SECTION 19: TOP NAVIGATION RADIO STYLE
+Use:
+Home, Search Movies aur AI Chatbot ko top navbar jaisa attractive look dene ke liye
+============================================ */
+
+div[role="radiogroup"] {
+    background-color: #161b22;
+    padding: 12px;
+    border-radius: 16px;
+    border: 1px solid #30363d;
+    margin-bottom: 25px;
+}
+
+div[role="radiogroup"] label {
+    background-color: #0f1117;
+    padding: 10px 18px;
+    border-radius: 12px;
+    margin-right: 10px;
+    border: 1px solid #30363d;
+    cursor: pointer;
+}
+
+div[role="radiogroup"] label:hover {
+    border-color: #e50914;
+    background-color: #1f242d;
+}
+
+/* ============================================
+SECTION 20: SEARCH MOVIE CARD
+Use:
+Search page movie cards ko premium OTT-style layout dene ke liye
+============================================ */
+
+.search-movie-card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 18px;
+    padding: 22px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ============================================
+SECTION 21: MOVIE META TEXT
+Use:
+Movie rating, IMDb aur year text ko clean style dene ke liye
+============================================ */
+
+.movie-meta {
+    color: #c9d1d9;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+/* ============================================
+SECTION 22: WATCHLIST CARD
+Use:
+Watchlist page ke saved movie cards ko attractive layout dene ke liye
+============================================ */
+
+.watchlist-card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 18px;
+    padding: 22px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ============================================
+SECTION 23: EMPTY WATCHLIST BOX
+Use:
+Watchlist empty hone par attractive message box show karne ke liye
+============================================ */
+
+.empty-watchlist {
+    background: linear-gradient(135deg, #161b22, #0f1117);
+    border: 1px solid #30363d;
+    border-radius: 20px;
+    padding: 35px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.empty-watchlist h2 {
+    color: #ffffff !important;
+    margin-bottom: 10px;
+}
+
+.empty-watchlist p {
+    color: #c9d1d9;
+    font-size: 16px;
+}
+
+/* ============================================
+SECTION 24: CHATBOT HERO SECTION
+Use:
+AI Chatbot page ko attractive intro card dene ke liye
+============================================ */
+
+.chatbot-hero {
+    background: linear-gradient(135deg, #161b22, #e50914);
+    border-radius: 20px;
+    padding: 28px;
+    margin-bottom: 25px;
+    border: 1px solid #30363d;
+}
+
+.chatbot-hero h2 {
+    color: #ffffff !important;
+    margin-bottom: 10px;
+}
+
+.chatbot-hero p {
+    color: #f1f1f1;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* ============================================
+SECTION 25: LOGIN REGISTER PAGE STYLE
+Use:
+Login/Register page ko clean Netflix-style center card look dene ke liye
+============================================ */
+
+div[data-testid="stForm"],
+.login-card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+}
+
+
+/* ============================================
+SECTION 26: RADIO OPTION STYLE
+Use:
+Login/Register radio option ko better tab look dene ke liye
+============================================ */
+
+div[role="radiogroup"] label {
+    font-weight: 600;
+}
+
+/* ============================================
+SECTION 27: USER LOGIN HERO
+Use:
+Login/Register page ko attractive Netflix-style welcome banner dene ke liye
+============================================ */
+
+.user-login-hero {
+    background: linear-gradient(135deg, #e50914, #141414);
+    padding: 32px;
+    border-radius: 22px;
+    text-align: center;
+    margin-bottom: 25px;
+    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.45);
+}
+
+.user-login-hero h1 {
+    color: #ffffff !important;
+    font-size: 42px;
+    margin-bottom: 8px;
+}
+
+.user-login-hero h3 {
+    color: #ffffff !important;
+    margin-bottom: 10px;
+}
+
+.user-login-hero p {
+    color: #f1f1f1;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* ============================================
+SECTION 28: USER LOGIN CARD IMPROVEMENT
+Use:
+Login/Register card ko premium center layout dene ke liye
+============================================ */
+
+.login-card {
+    background: linear-gradient(135deg, #161b22, #0f1117);
+    border: 1px solid #30363d;
+    border-radius: 24px;
+    padding: 38px;
+    max-width: 650px;
+    margin: 35px auto;
+    box-shadow: 0 16px 42px rgba(0, 0, 0, 0.55);
+}
+
+/* ============================================
+SECTION 29: LOGIN FULL PAGE HERO
+Use:
+Login/Register page ko premium OTT landing page look dene ke liye
+============================================ */
+
+.login-page-bg {
+    background:
+        linear-gradient(rgba(15, 17, 23, 0.65), rgba(15, 17, 23, 0.95)),
+        linear-gradient(135deg, #e50914, #141414);
+    border-radius: 28px;
+    padding: 45px;
+    margin-bottom: 30px;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
+}
+
+.login-hero-section {
+    text-align: center;
+}
+
+.login-hero-section h1 {
+    color: #ffffff !important;
+    font-size: 52px;
+    margin-bottom: 10px;
+}
+
+.login-hero-section h2 {
+    color: #ffffff !important;
+    font-size: 26px;
+    margin-bottom: 14px;
+}
+
+.login-hero-section p {
+    color: #f1f1f1;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* ============================================
+SECTION 30: LOGIN FEATURE BOX
+Use:
+Login page par attractive feature information dikhane ke liye
+============================================ */
+
+.login-feature-box {
+    background: linear-gradient(135deg, #161b22, #1f242d);
+    border: 1px solid #30363d;
+    border-radius: 24px;
+    padding: 35px;
+    min-height: 360px;
+    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.45);
+}
+
+.login-feature-box h3 {
+    color: #ffffff !important;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.login-feature-box p {
+    color: #d6d6d6;
+    font-size: 17px;
+    margin-bottom: 16px;
+}
+
+
+/* ============================================
+SECTION 31: PREMIUM LOGIN CARD
+Use:
+Login/Register form ko attractive premium card look dene ke liye
+============================================ */
+
+.login-card {
+    background: rgba(22, 27, 34, 0.98);
+    border: 1px solid #30363d;
+    border-radius: 24px;
+    padding: 35px;
+    min-height: 360px;
+    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.55);
+}
+
+/* ============================================
+SECTION 29: PREMIUM AUTH HERO
+Use:
+Login page ko modern OTT landing page look dene ke liye
+============================================ */
+
+.auth-hero {
+    min-height: 360px;
+    border-radius: 30px;
+    margin-bottom: -90px;
+    background:
+        linear-gradient(90deg, rgba(0,0,0,0.95), rgba(0,0,0,0.55), rgba(229,9,20,0.35)),
+        radial-gradient(circle at top right, #e50914, transparent 35%),
+        linear-gradient(135deg, #0f1117, #161b22);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65);
+    border: 1px solid #30363d;
+}
+
+.auth-overlay {
+    padding: 55px;
+}
+
+.auth-left {
+    max-width: 620px;
+}
+
+.auth-badge {
+    display: inline-block;
+    background-color: rgba(229, 9, 20, 0.18);
+    color: #ffffff;
+    border: 1px solid rgba(229, 9, 20, 0.55);
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.auth-left h1 {
+    color: #ffffff !important;
+    font-size: 56px;
+    line-height: 1.05;
+    margin-bottom: 18px;
+}
+
+.auth-left p {
+    color: #d6d6d6;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.auth-points {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.auth-points p{
+    background-color: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 12px 16px;
+    border-radius: 14px;
+    color: #ffffff;
+}
+
+
+/* ============================================
+SECTION 30: PREMIUM AUTH FORM CARD
+Use:
+Login/Register form ko hero ke upar floating premium card look dene ke liye
+============================================ */
+
+.auth-form-card {
+    background: rgba(22, 27, 34, 0.96);
+    border: 1px solid #30363d;
+    border-radius: 26px;
+    padding: 34px;
+    max-width: 520px;
+    margin: 0 auto 30px auto;
+    position: relative;
+    z-index: 5;
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(12px);
+}
+
+.auth-form-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.auth-form-title h2 {
+    color: #ffffff !important;
+    font-size: 30px;
+    margin-bottom: 6px;
+}
+
+.auth-form-title p {
+    color: #c9d1d9;
+    margin: 0;
+}
+
+/* ============================================
+SECTION 32: AUTH FEATURE CARDS
+Use:
+Login page ke feature points ko attractive cards me show karne ke liye
+============================================ */
+
+.auth-feature-card {
+    background: linear-gradient(135deg, #161b22, #1f242d);
+    border: 1px solid #30363d;
+    border-radius: 18px;
+    padding: 22px;
+    min-height: 145px;
+    margin-bottom: 24px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.38);
+    transition: 0.3s ease;
+}
+
+.auth-feature-card:hover {
+    transform: translateY(-5px);
+    border-color: #e50914;
+}
+
+.auth-feature-card h3 {
+    color: #ffffff !important;
+    margin-bottom: 10px;
+}
+
+.auth-feature-card p {
+    color: #c9d1d9;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+/* ============================================
+SECTION 33: ANIMATED LOGIN BACKGROUND
+Use:
+Login page ko colorful cinematic animated background dene ke liye
+============================================ */
+
+.stApp {
+    background:
+        radial-gradient(circle at top left, rgba(229, 9, 20, 0.18), transparent 25%),
+        radial-gradient(circle at bottom right, rgba(0, 140, 255, 0.14), transparent 25%),
+        linear-gradient(135deg, #0f1117, #141922, #1b1f2a);
+    background-size: 400% 400%;
+    animation: animatedBackground 14s ease infinite;
+}
+
+
+/* ============================================
+SECTION 34: BACKGROUND ANIMATION
+Use:
+Background colors ko smooth move animation dene ke liye
+============================================ */
+
+@keyframes animatedBackground {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* ============================================
+SECTION 35: HERO GLOW EFFECT
+Use:
+Top hero section ko glowing cinematic effect dene ke liye
+============================================ */
+
+.auth-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.auth-hero::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    background: rgba(229, 9, 20, 0.22);
+
+    border-radius: 50%;
+
+    top: -120px;
+    right: -80px;
+
+    filter: blur(70px);
+
+    animation: floatingGlow 6s ease-in-out infinite;
+}
+
+.auth-hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 240px;
+    height: 240px;
+
+    background: rgba(0, 140, 255, 0.18);
+
+    border-radius: 50%;
+
+    bottom: -100px;
+    left: -60px;
+
+    filter: blur(60px);
+
+    animation: floatingGlow 8s ease-in-out infinite;
+}
+
+
+/* ============================================
+SECTION 36: FLOATING GLOW ANIMATION
+Use:
+Hero glowing circles ko floating animation dene ke liye
+============================================ */
+
+@keyframes floatingGlow {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(18px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+/* ============================================
+SECTION 37: LOGIN CARD HOVER EFFECT
+Use:
+Login/Register card ko premium floating feel dene ke liye
+============================================ */
+
+.auth-form-card {
+    transition: 0.35s ease;
+}
+
+.auth-form-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75);
+}
+
+
+/* ============================================
+SECTION 38: FEATURE CARD GLASS EFFECT
+Use:
+Feature cards ko glassmorphism premium effect dene ke liye
+============================================ */
+
+.auth-feature-card {
+
+    background: rgba(22, 27, 34, 0.75);
+
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ============================================
+SECTION 39: FORCE PREMIUM LOGIN PAGE COLORS
+Use:
+Login page par forcefully colorful premium background aur animation apply karne ke liye
+============================================ */
+
+.stApp {
+    background: linear-gradient(-45deg, #0f1117, #1b1f2a, #3b0a0a, #09142b) !important;
+    background-size: 400% 400% !important;
+    animation: cinemateBgMove 10s ease infinite !important;
+}
+
+@keyframes cinemateBgMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* ============================================
+SECTION 40: FORCE HERO DESIGN
+Use:
+Login hero ko colorful cinematic banner banane ke liye
+============================================ */
+
+.auth-hero {
+    background: linear-gradient(135deg, #e50914, #4b0005, #111827) !important;
+    border-radius: 30px !important;
+    padding: 40px !important;
+    border: 2px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 0 45px rgba(172, 13, 21, 0.316) !important;
+    animation: heroFloat 4s ease-in-out infinite !important;
+}
+
+@keyframes heroFloat {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+/* ============================================
+SECTION 41: FORCE FEATURE CARDS
+Use:
+Feature cards ko colorful glowing cards banane ke liye
+============================================ */
+
+.auth-feature-card {
+    background: linear-gradient(135deg, #161b22, #2d1111) !important;
+    border: 1px solid rgba(229, 9, 20, 0.45) !important;
+    box-shadow: 0 0 25px rgba(229, 9, 20, 0.25) !important;
+}
+
+
+/* ============================================
+SECTION 42: FORCE LOGIN CARD
+Use:
+Login/Register form ko glowing premium card banane ke liye
+============================================ */
+
+.auth-form-card {
+    background: linear-gradient(135deg, #161b22, #111827) !important;
+    border: 1px solid rgba(229, 9, 20, 0.45) !important;
+    box-shadow: 0 0 35px rgba(229, 9, 20, 0.35) !important;
+}

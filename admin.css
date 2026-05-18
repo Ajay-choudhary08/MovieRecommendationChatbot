@@ -1,0 +1,300 @@
+/* ============================================
+SECTION 1: ADMIN FONT IMPORT
+Use:
+Admin panel ko modern clean font dene ke liye
+============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* ============================================
+SECTION 2: ADMIN APP BACKGROUND
+Use:
+Admin dashboard ko premium dark look dene ke liye
+============================================ */
+
+html,
+body,
+[class*="css"] {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f1117;
+    color: #ffffff;
+}
+
+
+/* ============================================
+SECTION 3: MAIN CONTAINER SPACING
+Use:
+Admin content ko proper spacing dene ke liye
+============================================ */
+
+.block-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+
+/* ============================================
+SECTION 4: ADMIN TITLE STYLE
+Use:
+Admin headings ko attractive red highlight dene ke liye
+============================================ */
+
+h1 {
+    color: #e50914 !important;
+    font-weight: 700 !important;
+}
+
+h2,
+h3 {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+
+/* ============================================
+SECTION 5: ADMIN SIDEBAR STYLE
+Use:
+Admin sidebar ko dark professional look dene ke liye
+============================================ */
+
+section[data-testid="stSidebar"] {
+    background-color: #161b22;
+    border-right: 1px solid #30363d;
+}
+
+
+/* ============================================
+SECTION 6: INPUT FIELD STYLE
+Use:
+Admin login/add/edit form inputs ko clean dark style dene ke liye
+============================================ */
+
+.stTextInput input,
+.stNumberInput input,
+.stTextArea textarea {
+    background-color: #1c1f26 !important;
+    color: #ffffff !important;
+    border: 1px solid #30363d !important;
+    border-radius: 10px !important;
+}
+
+
+/* ============================================
+SECTION 7: ADMIN BUTTON STYLE
+Use:
+Admin panel buttons ko Netflix-style red premium look dene ke liye
+============================================ */
+
+.stButton button,
+.stFormSubmitButton button {
+    background-color: #e50914 !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 10px !important;
+    padding: 10px 18px !important;
+    font-weight: 600 !important;
+    transition: 0.3s ease;
+}
+
+
+/* ============================================
+SECTION 8: BUTTON HOVER EFFECT
+Use:
+Button hover par smooth animation dene ke liye
+============================================ */
+
+.stButton button:hover,
+.stFormSubmitButton button:hover {
+    background-color: #b20710 !important;
+    transform: scale(1.03);
+}
+
+
+/* ============================================
+SECTION 9: ADMIN LOGIN CARD
+Use:
+Admin login screen ko center card style dene ke liye
+============================================ */
+
+.admin-login-card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 22px;
+    padding: 35px;
+    margin: 40px auto;
+    max-width: 520px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+}
+
+
+/* ============================================
+SECTION 10: STATS CARD DESIGN
+Use:
+Dashboard stats cards ko attractive admin overview dene ke liye
+============================================ */
+
+.stat-card {
+    background: linear-gradient(135deg, #161b22, #1f242d);
+    border: 1px solid #30363d;
+    border-radius: 20px;
+    padding: 26px;
+    text-align: center;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+    transition: 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-6px);
+    border-color: #e50914;
+    box-shadow: 0 12px 32px rgba(229, 9, 20, 0.25);
+}
+
+.stat-card h2 {
+    color: #e50914 !important;
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+.stat-card p {
+    color: #c9d1d9;
+    font-size: 16px;
+    margin: 0;
+}
+
+
+/* ============================================
+SECTION 11: ADMIN RADIO NAVIGATION
+Use:
+Admin menu ko top tab navigation jaisa look dene ke liye
+============================================ */
+
+div[role="radiogroup"] {
+    background-color: #161b22;
+    padding: 12px;
+    border-radius: 16px;
+    border: 1px solid #30363d;
+    margin-bottom: 25px;
+}
+
+div[role="radiogroup"] label {
+    background-color: #0f1117;
+    padding: 10px 18px;
+    border-radius: 12px;
+    margin-right: 10px;
+    border: 1px solid #30363d;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+div[role="radiogroup"] label:hover {
+    border-color: #e50914;
+    background-color: #1f242d;
+}
+
+
+/* ============================================
+SECTION 12: EXPANDER STYLE
+Use:
+Manage Movies expander ko premium card look dene ke liye
+============================================ */
+
+details {
+    background-color: #161b22 !important;
+    border: 1px solid #30363d !important;
+    border-radius: 14px !important;
+    margin-bottom: 14px !important;
+    padding: 8px !important;
+}
+
+
+/* ============================================
+SECTION 13: DATAFRAME STYLE
+Use:
+Movie Data table ko clean admin look dene ke liye
+============================================ */
+
+[data-testid="stDataFrame"] {
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #30363d;
+}
+
+
+/* ============================================
+SECTION 14: SCROLLBAR STYLE
+Use:
+Admin panel scrollbar ko dark red theme dene ke liye
+============================================ */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f1117;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e50914;
+    border-radius: 10px;
+}
+
+/* ============================================
+SECTION 15: ADMIN REGISTER CARD
+Use:
+Hidden admin register screen ko premium card layout dene ke liye
+============================================ */
+
+.admin-register-card {
+    background: linear-gradient(135deg, #161b22, #1f242d);
+    border: 1px solid #30363d;
+    border-radius: 24px;
+    padding: 35px;
+    margin: 35px auto;
+    max-width: 600px;
+    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.45);
+}
+
+
+/* ============================================
+SECTION 16: ADMIN AUTH TABS
+Use:
+Admin Login/Register radio tabs ko attractive tab style dene ke liye
+============================================ */
+
+div[role="radiogroup"] {
+    background-color: #161b22;
+    padding: 12px;
+    border-radius: 16px;
+    border: 1px solid #30363d;
+    margin-bottom: 25px;
+}
+
+div[role="radiogroup"] label {
+    background-color: #0f1117;
+    padding: 10px 18px;
+    border-radius: 12px;
+    margin-right: 10px;
+    border: 1px solid #30363d;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+div[role="radiogroup"] label:hover {
+    border-color: #e50914;
+    background-color: #1f242d;
+}
+
+
+/* ============================================
+SECTION 17: ADMIN ALERT BOXES
+Use:
+Success, warning aur error messages ko clean rounded look dene ke liye
+============================================ */
+
+.stSuccess,
+.stWarning,
+.stError {
+    border-radius: 12px !important;
+}

@@ -1,0 +1,20 @@
+[
+    {
+        "name": "ajay choudhary",
+        "email": "ajayc4889@gmail.com",
+        "password": "123456",
+        "role": "user"
+    },
+    {
+        "name": "ajay",
+        "email": "ajayc4778",
+        "password": "123456",
+        "role": "admin"
+    },
+    {
+        "name": "ajay patel",
+        "email": "ajayc4886@gmail.com",
+        "password": "123456",
+        "role": "admin"
+    }
+]

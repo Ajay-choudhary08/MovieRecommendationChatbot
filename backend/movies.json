@@ -1,0 +1,359 @@
+[
+  {
+    "title": "Interstellar",
+    "genre": "Sci-Fi",
+    "rating": 8.6,
+    "year": 2014,
+    "description": "A space exploration movie with emotional storytelling."
+  },
+  {
+    "title": "Inception",
+    "genre": "Sci-Fi",
+    "rating": 8.8,
+    "year": 2010,
+    "description": "A mind-bending dream thriller."
+  },
+  {
+    "title": "The Dark Knight",
+    "genre": "Action",
+    "rating": 9.0,
+    "year": 2008,
+    "description": "Batman faces the Joker in Gotham City."
+  },
+  {
+    "title": "Avengers Endgame",
+    "genre": "Action",
+    "rating": 8.5,
+    "year": 2019,
+    "description": "The Avengers fight Thanos to save the universe."
+  },
+  {
+    "title": "Avatar",
+    "genre": "Sci-Fi",
+    "rating": 7.9,
+    "year": 2009,
+    "description": "Humans explore the alien world of Pandora."
+  },
+  {
+    "title": "Titanic",
+    "genre": "Romance",
+    "rating": 7.9,
+    "year": 1997,
+    "description": "A tragic love story aboard the Titanic."
+  },
+  {
+    "title": "3 Idiots",
+    "genre": "Comedy",
+    "rating": 8.4,
+    "year": 2009,
+    "description": "Three friends navigate engineering college life."
+  },
+  {
+    "title": "Joker",
+    "genre": "Drama",
+    "rating": 8.4,
+    "year": 2019,
+    "description": "Origin story of Gotham's iconic villain."
+  },
+  {
+    "title": "Oppenheimer",
+    "genre": "Drama",
+    "rating": 8.6,
+    "year": 2023,
+    "description": "The story of J. Robert Oppenheimer."
+  },
+  {
+    "title": "Dune",
+    "genre": "Sci-Fi",
+    "rating": 8.0,
+    "year": 2021,
+    "description": "A young hero rises on a desert planet."
+  },
+  {
+    "title": "Doctor Strange",
+    "genre": "Action",
+    "rating": 7.5,
+    "year": 2016,
+    "description": "A surgeon becomes a master of mystical arts."
+  },
+  {
+    "title": "Spider-Man No Way Home",
+    "genre": "Action",
+    "rating": 8.3,
+    "year": 2021,
+    "description": "Spider-Man faces villains from other universes."
+  },
+  {
+    "title": "The Matrix",
+    "genre": "Sci-Fi",
+    "rating": 8.7,
+    "year": 1999,
+    "description": "A hacker discovers reality is a simulation."
+  },
+  {
+    "title": "John Wick",
+    "genre": "Action",
+    "rating": 7.4,
+    "year": 2014,
+    "description": "A retired assassin seeks revenge."
+  },
+  {
+    "title": "Fight Club",
+    "genre": "Drama",
+    "rating": 8.8,
+    "year": 1999,
+    "description": "An underground fight club changes lives."
+  },
+  {
+    "title": "The Godfather",
+    "genre": "Crime",
+    "rating": 9.2,
+    "year": 1972,
+    "description": "The rise of a mafia family."
+  },
+  {
+    "title": "Shutter Island",
+    "genre": "Thriller",
+    "rating": 8.2,
+    "year": 2010,
+    "description": "A detective investigates a mysterious island."
+  },
+  {
+    "title": "Parasite",
+    "genre": "Thriller",
+    "rating": 8.5,
+    "year": 2019,
+    "description": "A poor family infiltrates a wealthy household."
+  },
+  {
+    "title": "Deadpool",
+    "genre": "Comedy",
+    "rating": 8.0,
+    "year": 2016,
+    "description": "A hilarious anti-hero seeks revenge."
+  },
+  {
+    "title": "Iron Man",
+    "genre": "Action",
+    "rating": 7.9,
+    "year": 2008,
+    "description": "Tony Stark becomes Iron Man."
+  },
+  {
+    "title": "Black Panther",
+    "genre": "Action",
+    "rating": 7.3,
+    "year": 2018,
+    "description": "The king of Wakanda rises."
+  },
+  {
+    "title": "Thor Ragnarok",
+    "genre": "Comedy",
+    "rating": 7.9,
+    "year": 2017,
+    "description": "Thor battles Hela to save Asgard."
+  },
+  {
+    "title": "The Conjuring",
+    "genre": "Horror",
+    "rating": 7.5,
+    "year": 2013,
+    "description": "Paranormal investigators face dark forces."
+  },
+  {
+    "title": "Annabelle",
+    "genre": "Horror",
+    "rating": 5.4,
+    "year": 2014,
+    "description": "A haunted doll terrorizes a family."
+  },
+  {
+    "title": "It",
+    "genre": "Horror",
+    "rating": 7.3,
+    "year": 2017,
+    "description": "Children confront a terrifying clown."
+  },
+  {
+    "title": "Frozen",
+    "genre": "Animation",
+    "rating": 7.4,
+    "year": 2013,
+    "description": "A magical journey between two sisters."
+  },
+  {
+    "title": "Toy Story",
+    "genre": "Animation",
+    "rating": 8.3,
+    "year": 1995,
+    "description": "Toys come alive when humans are away."
+  },
+  {
+    "title": "Finding Nemo",
+    "genre": "Animation",
+    "rating": 8.1,
+    "year": 2003,
+    "description": "A clownfish searches for his son."
+  },
+  {
+    "title": "Coco",
+    "genre": "Animation",
+    "rating": 8.4,
+    "year": 2017,
+    "description": "A boy enters the land of the dead."
+  },
+  {
+    "title": "Your Name",
+    "genre": "Romance",
+    "rating": 8.4,
+    "year": 2016,
+    "description": "Two strangers mysteriously switch bodies."
+  },
+  {
+    "title": "La La Land",
+    "genre": "Romance",
+    "rating": 8.0,
+    "year": 2016,
+    "description": "A musician and actress chase their dreams."
+  },
+  {
+    "title": "The Notebook",
+    "genre": "Romance",
+    "rating": 7.8,
+    "year": 2004,
+    "description": "A timeless love story."
+  },
+  {
+    "title": "Gladiator",
+    "genre": "Action",
+    "rating": 8.5,
+    "year": 2000,
+    "description": "A Roman general seeks revenge."
+  },
+  {
+    "title": "Mad Max Fury Road",
+    "genre": "Action",
+    "rating": 8.1,
+    "year": 2015,
+    "description": "A high-speed post-apocalyptic chase."
+  },
+  {
+    "title": "The Batman",
+    "genre": "Crime",
+    "rating": 7.8,
+    "year": 2022,
+    "description": "Batman investigates Gotham's corruption."
+  },
+  {
+    "title": "Tenet",
+    "genre": "Sci-Fi",
+    "rating": 7.3,
+    "year": 2020,
+    "description": "Time inversion changes reality."
+  },
+  {
+    "title": "Blade Runner 2049",
+    "genre": "Sci-Fi",
+    "rating": 8.0,
+    "year": 2017,
+    "description": "A futuristic detective uncovers secrets."
+  },
+  {
+    "title": "The Shawshank Redemption",
+    "genre": "Drama",
+    "rating": 9.3,
+    "year": 1994,
+    "description": "Hope survives inside a prison."
+  },
+  {
+    "title": "Forrest Gump",
+    "genre": "Drama",
+    "rating": 8.8,
+    "year": 1994,
+    "description": "The extraordinary life of Forrest Gump."
+  },
+  {
+    "title": "Whiplash",
+    "genre": "Drama",
+    "rating": 8.5,
+    "year": 2014,
+    "description": "A drummer faces a brutal music teacher."
+  },
+  {
+    "title": "The Lion King",
+    "genre": "Animation",
+    "rating": 8.5,
+    "year": 1994,
+    "description": "A lion cub discovers his destiny."
+  },
+  {
+    "title": "Kung Fu Panda",
+    "genre": "Animation",
+    "rating": 7.6,
+    "year": 2008,
+    "description": "A panda becomes a kung fu hero."
+  },
+  {
+    "title": "Minions",
+    "genre": "Comedy",
+    "rating": 6.4,
+    "year": 2015,
+    "description": "The Minions search for a master."
+  },
+  {
+    "title": "Zootopia",
+    "genre": "Animation",
+    "rating": 8.0,
+    "year": 2016,
+    "description": "Animals solve a city-wide mystery."
+  },
+  {
+    "title": "Extraction",
+    "genre": "Action",
+    "rating": 6.8,
+    "year": 2020,
+    "description": "A mercenary rescues a kidnapped boy."
+  },
+  {
+    "title": "The Nun",
+    "genre": "Horror",
+    "rating": 5.3,
+    "year": 2018,
+    "description": "A demonic nun terrorizes a monastery."
+  },
+  {
+    "title": "A Quiet Place",
+    "genre": "Horror",
+    "rating": 7.5,
+    "year": 2018,
+    "description": "Silence is survival against monsters."
+  },
+  {
+    "title": "Fast and Furious 7",
+    "genre": "Action",
+    "rating": 7.1,
+    "year": 2015,
+    "description": "Fast cars and global action."
+  },
+  {
+    "title": "Mission Impossible Fallout",
+    "genre": "Action",
+    "rating": 7.7,
+    "year": 2018,
+    "description": "Ethan Hunt faces impossible missions again."
+  },
+  {
+    "title": "Top Gun Maverick",
+    "genre": "Action",
+    "rating": 8.3,
+    "year": 2022,
+    "description": "Maverick returns to train elite pilots."
+  },
+  {
+    "title": "The Hangover",
+    "genre": "Comedy",
+    "rating": 7.7,
+    "year": 2009,
+    "description": "Friends wake up after a crazy night in Vegas."
+  }
+]
